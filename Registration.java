@@ -16,7 +16,7 @@ public class Registration extends JFrame {
         this.setLocationRelativeTo(null);
 
         ImageIcon blur = new ImageIcon("./assets/Rectangle 2.png");
-        ImageIcon BackgroundImg = new ImageIcon("./assets/background-3.png");
+        ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");
         ImageIcon image = new ImageIcon("./assets/register-2.png");
         ImageIcon logoImg = new ImageIcon("./assets/logo.png");
 

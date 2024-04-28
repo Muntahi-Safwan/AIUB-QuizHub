@@ -11,7 +11,7 @@ public class OOP extends JFrame{
         this.setLocationRelativeTo(null);
 
         ImageIcon selectImg = new ImageIcon("./assets/quizDetails.png");
-        ImageIcon BackgroundImg = new ImageIcon("./assets/background-5.png");
+        ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");
         ImageIcon blur = new ImageIcon("./assets/Rectangle-21.png");
 
         JLabel background = new JLabel(BackgroundImg);
@@ -77,7 +77,8 @@ public class OOP extends JFrame{
         button1.setAlignmentY(JButton.CENTER_ALIGNMENT);
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.out.println("CSE 110");
+                setVisible(false);
+                OOPQuiz oopQuiz = new OOPQuiz("Muntahi");
             }
         });
 

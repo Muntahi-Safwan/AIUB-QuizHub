@@ -12,7 +12,7 @@ public class Welcome extends JFrame{
         Font font = new Font("Roboto", Font.BOLD, 30);
 
         ImageIcon logoImg = new ImageIcon("./assets/logo.png");
-        ImageIcon BackgroundImg = new ImageIcon("./assets/background-3.png");
+        ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");
 
         JLabel background = new JLabel(BackgroundImg);
 

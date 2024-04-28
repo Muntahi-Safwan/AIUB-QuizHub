@@ -10,9 +10,9 @@ public class SelectCourse extends JFrame {
         this.setTitle("AIUB QuizHub");
         this.setSize(1024, 720); // 480
         this.setResizable(false);
-
+        
         ImageIcon selectImg = new ImageIcon("./assets/select.png");
-        ImageIcon BackgroundImg = new ImageIcon("./assets/background-3.png");
+        ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");
         ImageIcon blur = new ImageIcon("./assets/Rectangle-21.png");
 
         JLabel background = new JLabel(BackgroundImg);
@@ -61,7 +61,9 @@ public class SelectCourse extends JFrame {
         button2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // new CSE111();
-                System.out.println("CSE 111");
+                setVisible(false);
+                OOP o = new OOP();
+                o.setVisible(true);
             }
         });
 
@@ -135,7 +137,7 @@ public class SelectCourse extends JFrame {
         this.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        SelectCourse s = new SelectCourse();
-    }
+    // public static void main(String[] args) {
+    //     SelectCourse s = new SelectCourse();
+    // }
 }

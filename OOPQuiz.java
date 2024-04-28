@@ -27,7 +27,7 @@ public class OOPQuiz extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null);
         
         ImageIcon selectImg = new ImageIcon("./assets/quiz.png");
-        ImageIcon BackgroundImg = new ImageIcon("./assets/background-5.png");
+        ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");
         ImageIcon blur = new ImageIcon("./assets/Rectangle-21.png");
 
         // ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./assets/logo.png"));
@@ -126,27 +126,27 @@ public class OOPQuiz extends JFrame implements ActionListener {
         answers[9][1] = "Bytecode is executed by JVM";
         
         opt1 = new JRadioButton();
-        opt1.setBounds(100, 360, 400, 30);
+        opt1.setBounds(110, 380, 400, 30);
         opt1.setBackground(new Color(0xB8E4FA));
-        opt1.setFont(new Font("Dialog", Font.PLAIN, 20));
+        opt1.setFont(new Font("Roboto", Font.PLAIN, 20));
         add(opt1);
         
         opt2 = new JRadioButton();
-        opt2.setBounds(100, 400, 400, 30);
+        opt2.setBounds(110, 420, 400, 30);
         opt2.setBackground(new Color(0xB8E4FA));
-        opt2.setFont(new Font("Dialog", Font.PLAIN, 20));
+        opt2.setFont(new Font("Roboto", Font.PLAIN, 20));
         add(opt2);
         
         opt3 = new JRadioButton();
-        opt3.setBounds(100, 440, 400, 30);
+        opt3.setBounds(110, 460, 400, 30);
         opt3.setBackground(new Color(0xB8E4FA));
-        opt3.setFont(new Font("Dialog", Font.PLAIN, 20));
+        opt3.setFont(new Font("Roboto", Font.PLAIN, 20));
         add(opt3);
         
         opt4 = new JRadioButton();
-        opt4.setBounds(100, 480, 400, 30);
+        opt4.setBounds(110, 500, 400, 30);
         opt4.setBackground(new Color(0xB8E4FA));
-        opt4.setFont(new Font("Dialog", Font.PLAIN, 20));
+        opt4.setFont(new Font("Roboto", Font.PLAIN, 20));
         add(opt4);
         
         groupoptions = new ButtonGroup();
@@ -156,18 +156,18 @@ public class OOPQuiz extends JFrame implements ActionListener {
         groupoptions.add(opt4);
         
         next = new JButton("Next");
-        next.setBounds(500, 550, 200, 40);
-        next.setFont(new Font("Tahoma", Font.PLAIN, 22));
-        next.setBackground(new Color(30, 144, 255));
-        next.setForeground(Color.WHITE);
+        next.setBounds(109, 545, 190, 40);
+        next.setFont(new Font("Roboto", Font.BOLD, 22));
+        next.setBackground(Color.black);
+        next.setForeground(new Color(0xB8E4FA));
         next.addActionListener(this);
         add(next);
         
         submit = new JButton("Submit");
-        submit.setBounds(500, 710, 200, 40);
-        submit.setFont(new Font("Tahoma", Font.PLAIN, 22));
-        submit.setBackground(new Color(30, 144, 255));
-        submit.setForeground(Color.WHITE);
+        submit.setBounds(320, 545, 190, 40);
+        submit.setFont(new Font("Roboto", Font.BOLD, 22));
+        next.setBackground(Color.black);
+        next.setForeground(new Color(0xB8E4FA));
         submit.addActionListener(this);
         submit.setEnabled(false);
         add(submit);
@@ -235,13 +235,13 @@ public class OOPQuiz extends JFrame implements ActionListener {
         super.paint(g);
         
         String time = "Time left - " + timer + " seconds"; // 15
-        g.setColor(Color.RED);
-        g.setFont(new Font("Tahoma", Font.BOLD, 25));
+        g.setColor(Color.white);
+        g.setFont(new Font("Roboto", Font.BOLD, 25));
         
         if (timer > 0) { 
-            g.drawString(time, 1100, 500);
+            g.drawString(time, 600, 500);
         } else {
-            g.drawString("Times up!!", 1100, 500);
+            g.drawString("Times up!!", 600, 500);
         }
         
         timer--; // 14
@@ -255,9 +255,9 @@ public class OOPQuiz extends JFrame implements ActionListener {
         
         if (ans_given == 1) {
             ans_given = 0;
-            timer = 15;
+            timer = 30;
         } else if (timer < 0) {
-            timer = 15;
+            timer = 30;
             opt1.setEnabled(true);
             opt2.setEnabled(true);
             opt3.setEnabled(true);
@@ -282,7 +282,7 @@ public class OOPQuiz extends JFrame implements ActionListener {
                     }
                 }
                 setVisible(false);
-                new Score(name, score);
+                Score s = new Score(name, score);
             } else { // next button
                 if (groupoptions.getSelection() == null) {
                    useranswers[count][0] = "";

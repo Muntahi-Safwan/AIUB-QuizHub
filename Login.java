@@ -7,6 +7,7 @@ import java.nio.file.Files;
 
 
 public class Login extends JFrame {
+    Person user;
     
     Login(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -16,7 +17,7 @@ public class Login extends JFrame {
         this.setLocationRelativeTo(null);
 
         ImageIcon blur = new ImageIcon("./assets/Rectangle 2.png");
-        ImageIcon BackgroundImg = new ImageIcon("./assets/background-3.png");
+        ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");
         ImageIcon image = new ImageIcon("./assets/login.png");
         ImageIcon logoImg = new ImageIcon("./assets/logo.png");
 
@@ -96,9 +97,15 @@ public class Login extends JFrame {
                         while ((line = reader.readLine()) != null) {
                             if (line.startsWith("Student ID : ") && line.substring(13).equals(StdIdS)) {
                                 // Found matching student ID
+                                // String studentId = line.substring(13);
                                 String nextLine = reader.readLine(); // Read next line for password
                                 if (nextLine.startsWith("Password : ") && nextLine.substring(11).equals(PasswordS)) {
-                                    // Password matches
+                                    // // Password matches
+                                    // String password = nextLine.substring(11);
+                                    // String fullName = reader.readLine().substring(12); // Read next line for full name
+                                    // String email = reader.readLine().substring(8); // Read next line for email
+                                    // String department = reader.readLine().substring(13); // Read next line for department
+                                    // user = new Person(fullName, studentId, email, password, department);
                                     found = true;
                                     break;
                                 }
@@ -109,6 +116,9 @@ public class Login extends JFrame {
                         if (found) {
                             JOptionPane.showMessageDialog(null, "Login Successful.", "Aiub QuizHub", JOptionPane.WARNING_MESSAGE);
                             setVisible(false);
+                            // StudentID, email
+                            // Person user = new Person(StudentID, email);
+                            // SelectCourse frame = new SelectCourse(user);
                             SelectCourse frame = new SelectCourse();
                             frame.setVisible(true);
                         } else {
