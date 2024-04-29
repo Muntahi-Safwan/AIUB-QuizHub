@@ -33,3 +33,10 @@ Email : shazidul@ablaha.com
 Department : CSE
 Time & Date : 01:38 AM, 25/04/2024
 ===============================================
+Student ID : 23-53069-3
+Password : adreta
+Full Name : Adreta Mallick
+Email : adreta@mallick.com
+Department : CSE
+Time & Date : 22:50 PM, 29/04/2024
+===============================================
