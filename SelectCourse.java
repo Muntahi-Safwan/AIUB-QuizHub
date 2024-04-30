@@ -12,7 +12,7 @@ public class SelectCourse extends JFrame {
         this.setResizable(false);
         
         ImageIcon selectImg = new ImageIcon("./assets/select.png");
-        ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");
+        ImageIcon BackgroundImg = new ImageIcon("./assets/background.png");
         ImageIcon blur = new ImageIcon("./assets/Rectangle-21.png");
 
         JLabel background = new JLabel(BackgroundImg);
@@ -36,6 +36,14 @@ public class SelectCourse extends JFrame {
         text2.setBackground(new Color(0xB8E4FA));
         text2.setAlignmentX(JLabel.CENTER_ALIGNMENT);
         text2.setForeground(Color.black);
+
+
+        // JLabel text3 = new JLabel("Name: " + user.name);
+        // text3.setFont(new Font("Roboto", Font.BOLD, 30));
+        // text3.setBounds(100, 200, 300, 100);
+        // text3.setBackground(new Color(0xB8E4FA));
+        // text3.setAlignmentX(JLabel.CENTER_ALIGNMENT);
+        // text3.setForeground(Color.black);
         
         JButton button1 = new JButton("Introduction to Programming");
         button1.setBounds(280, 300, 450, 40);
@@ -48,6 +56,9 @@ public class SelectCourse extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // new CSE110();
                 System.out.println("CSE 110");
+                setVisible(false);
+                IPQuiz o = new IPQuiz("Jawan");
+                o.setVisible(true);
             }
         });
 
@@ -137,7 +148,8 @@ public class SelectCourse extends JFrame {
         this.setVisible(true);
     }
 
-    // public static void main(String[] args) {
-    //     SelectCourse s = new SelectCourse();
-    // }
+    public static void main(String[] args) {
+        SelectCourse s = new SelectCourse();
+        s.setVisible(true);
+    }
 }

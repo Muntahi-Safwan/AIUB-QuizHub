@@ -5,10 +5,12 @@ import java.awt.event.*;
 public class OOP extends JFrame{
     OOP(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("AIUB QuizHub");
-        this.setSize(1024, 720);
+        this.setTitle("OOP | UniQuiz");
+        this.setSize(1024, 720); // 480
         this.setResizable(false);
         this.setLocationRelativeTo(null);
+        ImageIcon img = new ImageIcon("./assets/rounde-icon-logo.png");
+        this.setIconImage(img.getImage());
 
         ImageIcon selectImg = new ImageIcon("./assets/quizDetails.png");
         ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");

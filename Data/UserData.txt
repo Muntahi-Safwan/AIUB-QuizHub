@@ -40,3 +40,10 @@ Email : adreta@mallick.com
 Department : CSE
 Time & Date : 22:50 PM, 29/04/2024
 ===============================================
+Student ID : 23-53119-3
+Password : 1234
+Full Name : Muntahi
+Email : muntahi@gmail.com
+Department : CSE
+Time & Date : 15:00 PM, 30/04/2024
+===============================================

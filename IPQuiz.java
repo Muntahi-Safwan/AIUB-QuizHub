@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class OOPQuiz extends JFrame implements ActionListener {
+public class IPQuiz extends JFrame implements ActionListener {
     
     String questions[][] = new String[10][5];
     String answers[][] = new String[10][2];
@@ -19,9 +19,9 @@ public class OOPQuiz extends JFrame implements ActionListener {
     
     String name;
     
-    OOPQuiz(String name) {
+    IPQuiz(String name) {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("OOP Quiz | UniQuiz");
+        this.setTitle("IP Quiz | UniQuiz");
         this.setSize(1024, 720); // 480
         this.setResizable(false);
         this.setLocationRelativeTo(null);
@@ -32,7 +32,6 @@ public class OOPQuiz extends JFrame implements ActionListener {
         ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");
         ImageIcon blur = new ImageIcon("./assets/Rectangle-21.png");
 
-        // ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("./assets/logo.png"));
         JLabel background = new JLabel(BackgroundImg);
 
         JLabel blurLabel = new JLabel();
@@ -56,76 +55,76 @@ public class OOPQuiz extends JFrame implements ActionListener {
         question.setForeground(Color.black);
         add(question);
         
-        questions[0][0] = "Which is used to find and fix bugs in the Java programs.?";
-        questions[0][1] = "JVM";
-        questions[0][2] = "JDB";
-        questions[0][3] = "JDK";
-        questions[0][4] = "JRE";
+        questions[0][0] = "What does the ++ operator do in C++?";
+        questions[0][1] = "Adds 2";
+        questions[0][2] = "Multiplies by 2";
+        questions[0][3] = "Increments by 1";
+        questions[0][4] = "Decrements by 1";
 
-        questions[1][0] = "What is the return type of the hashCode() method in the Object class?";
-        questions[1][1] = "int";
-        questions[1][2] = "Object";
-        questions[1][3] = "long";
-        questions[1][4] = "void";
+        questions[1][0] = "What is the syntax for a single-line comment in C++?";
+        questions[1][1] = "# Comment";
+        questions[1][2] = "// Comment";
+        questions[1][3] = "/* Comment */";
+        questions[1][4] = "-- Comment";
 
-        questions[2][0] = "Which package contains the Random class?";
-        questions[2][1] = "java.util package";
-        questions[2][2] = "java.lang package";
-        questions[2][3] = "java.awt package";
-        questions[2][4] = "java.io package";
+        questions[2][0] = "What does the endl manipulator do in C++?";
+        questions[2][1] = "Skips to the next line";
+        questions[2][2] = "Prints a tab character";
+        questions[2][3] = "Inserts a new line";
+        questions[2][4] = "Clears the screen";
 
-        questions[3][0] = "An interface with no fields or methods is known as?";
-        questions[3][1] = "Runnable Interface";
-        questions[3][2] = "Abstract Interface";
-        questions[3][3] = "Marker Interface";
-        questions[3][4] = "CharSequence Interface";
+        questions[3][0] = "Which of the following is not a valid C++ data type?";
+        questions[3][1] = "float";
+        questions[3][2] = "string";
+        questions[3][3] = "char*";
+        questions[3][4] = "boolean";
 
-        questions[4][0] = "In which memory a String is stored, when we create a string using new operator?";
-        questions[4][1] = "Stack";
-        questions[4][2] = "String memory";
-        questions[4][3] = "Random storage space";
-        questions[4][4] = "Heap memory";
+        questions[4][0] = "What does the sizeof() operator return in C++?";
+        questions[4][1] = "Size of a variable in bytes";
+        questions[4][2] = "Size of a variable in bits";
+        questions[4][3] = "Number of elements in an array";
+        questions[4][4] = "Size of a class in bytes";
 
-        questions[5][0] = "Which of the following is a marker interface?";
-        questions[5][1] = "Runnable interface";
-        questions[5][2] = "Remote interface";
-        questions[5][3] = "Readable interface";
-        questions[5][4] = "Result interface";
+        questions[5][0] = "Which header file is needed for input and output operations in C++?";
+        questions[5][1] = "iostream.h";
+        questions[5][2] = "stdio.h";
+        questions[5][3] = "iostream ";
+        questions[5][4] = "io.h";
 
-        questions[6][0] = "Which keyword is used for accessing the features of a package?";
-        questions[6][1] = "import";
-        questions[6][2] = "package";
-        questions[6][3] = "extends";
-        questions[6][4] = "export";
+        questions[6][0] = "What does the break statement do in C++?";
+        questions[6][1] = "Exits the loop or switch statement";
+        questions[6][2] = "Continues with the next iteration of the loop";
+        questions[6][3] = "Skips to the end of the loop";
+        questions[6][4] = "Breaks the program execution";
 
-        questions[7][0] = "In java, jar stands for?";
-        questions[7][1] = "Java Archive Runner";
-        questions[7][2] = "Java Archive";
-        questions[7][3] = "Java Application Resource";
-        questions[7][4] = "Java Application Runner";
+        questions[7][0] = "How do you open a file in C++ for writing?";
+        questions[7][1] = "ofstream file('filename.txt')";
+        questions[7][2] = "ifstream file('filename.txt');";
+        questions[7][3] = "fstream file('filename.txt', ios::out);";
+        questions[7][4] = "file.open(\"filename.txt\", \"w\");";
 
-        questions[8][0] = "Which of the following is a mutable class in java?";
-        questions[8][1] = "java.lang.StringBuilder";
-        questions[8][2] = "java.lang.Short";
-        questions[8][3] = "java.lang.Byte";
-        questions[8][4] = "java.lang.String";
+        questions[8][0] = "What is the scope of a variable declared inside a function in C++?";
+        questions[8][1] = "Global scope";
+        questions[8][2] = "Function scope";
+        questions[8][3] = "Class scope";
+        questions[8][4] = "File scope";
 
-        questions[9][0] = "Which of the following option leads to the portability and security of Java?";
-        questions[9][1] = "Bytecode is executed by JVM";
-        questions[9][2] = "The applet makes the Java code secure and portable";
-        questions[9][3] = "Use of exception handling";
-        questions[9][4] = "Dynamic binding between objects";
+        questions[9][0] = "What is the size of the " + "char" + " data type in C++?";
+        questions[9][1] = "1 byte";
+        questions[9][2] = "2 bytes";
+        questions[9][3] = "4 bytes";
+        questions[9][4] = "6 bytes";
         
-        answers[0][1] = "JDB";
-        answers[1][1] = "int";
-        answers[2][1] = "java.util package";
-        answers[3][1] = "Marker Interface";
-        answers[4][1] = "Heap memory";
-        answers[5][1] = "Remote interface";
-        answers[6][1] = "import";
-        answers[7][1] = "Java Archive";
-        answers[8][1] = "java.lang.StringBuilder";
-        answers[9][1] = "Bytecode is executed by JVM";
+        answers[0][1] = "Increments by 1";
+        answers[1][1] = "// Comment";
+        answers[2][1] = "Inserts a new line";
+        answers[3][1] = "char*";
+        answers[4][1] = "Size of a variable in bytes";
+        answers[5][1] = "iostream";
+        answers[6][1] = "Exits the loop or switch statement";
+        answers[7][1] = "fstream file(\"filename.txt\", ios::out);";
+        answers[8][1] = "Function scope";
+        answers[9][1] = "1 byte";
         
         opt1 = new JRadioButton();
         opt1.setBounds(110, 380, 400, 30);
@@ -168,8 +167,8 @@ public class OOPQuiz extends JFrame implements ActionListener {
         submit = new JButton("Submit");
         submit.setBounds(320, 545, 190, 40);
         submit.setFont(new Font("Roboto", Font.BOLD, 22));
-        next.setBackground(Color.black);
-        next.setForeground(new Color(0xB8E4FA));
+        submit.setBackground(Color.black);
+        submit.setForeground(new Color(0xB8E4FA));
         submit.addActionListener(this);
         submit.setEnabled(false);
         add(submit);

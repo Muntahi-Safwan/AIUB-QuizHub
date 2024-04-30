@@ -10,13 +10,15 @@ public class Registration extends JFrame {
     
     Registration(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("AIUB QuizHub");
+        this.setTitle("Sign Up | UniQuiz");
         this.setSize(1024, 720); // 480
         this.setResizable(false);
         this.setLocationRelativeTo(null);
+        ImageIcon img = new ImageIcon("./assets/rounde-icon-logo.png");
+        this.setIconImage(img.getImage());
 
         ImageIcon blur = new ImageIcon("./assets/Rectangle 2.png");
-        ImageIcon BackgroundImg = new ImageIcon("./assets/background-7.png");
+        ImageIcon BackgroundImg = new ImageIcon("./assets/background.png");
         ImageIcon image = new ImageIcon("./assets/register-2.png");
         ImageIcon logoImg = new ImageIcon("./assets/logo.png");
 
